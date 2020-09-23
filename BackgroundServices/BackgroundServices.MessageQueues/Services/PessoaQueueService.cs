@@ -9,12 +9,21 @@ namespace BackgroundServices.MessageQueues.Services
     {
         public Task EscreverNaFila(Pessoa pessoa)
         {
+            //Simula uma escrita em uma fila.
             throw new NotImplementedException();
         }
 
         public Task<Pessoa> LerDaFila()
         {
-            throw new NotImplementedException();
+            //Simula uma leitura de uma fila.
+
+            var pessoa =  new Pessoa()
+            {
+                Id =1,
+                Nome = "Teste de Pessoa"
+            };
+
+            return Task.FromResult(pessoa);
         }
     }
 }

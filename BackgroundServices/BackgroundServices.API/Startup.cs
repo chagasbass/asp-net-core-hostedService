@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BackgroundServices.API.HostedServices;
+using BackgroundServices.Domain.Services;
+using BackgroundServices.MessageQueues.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +29,7 @@ namespace BackgroundServices.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddTransient<IPessoaQueueService, PessoaQueueService>();
             services.AddHostedService<QueueHostedService>();
         }
 

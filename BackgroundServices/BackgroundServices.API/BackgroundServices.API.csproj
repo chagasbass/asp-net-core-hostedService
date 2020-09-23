@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BackgroundServices.Domain\BackgroundServices.Domain.csproj" />
+    <ProjectReference Include="..\BackgroundServices.MessageQueues\BackgroundServices.MessageQueues.csproj" />
+  </ItemGroup>
+
 
 </Project>
